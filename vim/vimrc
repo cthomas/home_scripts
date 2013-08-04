@@ -1,0 +1,34 @@
+" Pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
+" Turn on syntax hightlighting
+syntax enable
+
+" Highlight C whitespace errors
+let c_space_errors=1
+
+" Enable advanced VIM features by default
+set nocp
+
+" Enable filetype plugins
+filetype plugin on
+
+map <C-L> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+set tags=~/.vim/stdtags,tags,.tags,../tags
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" " made, these lines close it on movement in insert mode or when leaving
+" " insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" Remove trailing spaces binding
+map <F12> :call TrimWhiteSpace()<CR>
+func! TrimWhiteSpace()
+  %s/\s*$//
+  ''
+:endfunction
+
+" Spell check binding
+map ^S :w!<CR>:!aspell check %<CR>:e! %<CR>

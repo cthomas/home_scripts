@@ -1,0 +1,33 @@
+#!/bin/bash
+
+UMOUNT_SDX=""
+DO_FSCK=true
+
+if [ -n "$1" ]
+then
+	UMOUNT_SDX="$1"
+else
+	UMOUNT_SDX="sdg"
+fi
+
+if [ -n "$2" ] && [ "false" == "$2" ]
+then
+	DO_FSCK=false
+fi
+
+sudo -K
+
+sync && sync && sync
+sudo umount "/dev/${UMOUNT_SDX}1"
+sudo umount "/dev/${UMOUNT_SDX}2"
+
+if [ "$DO_FSCK" == "true" ]
+then
+	sudo fsck -y "/dev/${UMOUNT_SDX}1"
+	sudo fsck -y "/dev/${UMOUNT_SDX}2"
+fi
+
+sudo rm -r /media/Neverlost
+sudo rm -r /media/persistent
+
+echo "Good to go..."
