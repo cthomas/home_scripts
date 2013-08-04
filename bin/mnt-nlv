@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+
+UMOUNT_SDX=""
+
+if [ -n "$1" ]
+then
+	UMOUNT_SDX="$1"
+else
+	UMOUNT_SDX="sdg"
+fi
+
+sudo -K
+
+sudo mkdir -p /media/Neverlost
+sudo mkdir -p /media/persistent
+
+sudo mount -t auto "/dev/${UMOUNT_SDX}1" /media/Neverlost
+sudo mount -t auto "/dev/${UMOUNT_SDX}2" /media/persistent
