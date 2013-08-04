@@ -1,3 +1,6 @@
+" Enable advanced VIM features by default
+set nocp
+
 " Pathogen
 call pathogen#infect()
 call pathogen#helptags()
@@ -7,9 +10,6 @@ syntax enable
 
 " Highlight C whitespace errors
 let c_space_errors=1
-
-" Enable advanced VIM features by default
-set nocp
 
 " Enable filetype plugins
 filetype plugin on
