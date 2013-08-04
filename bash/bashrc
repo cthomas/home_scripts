@@ -90,6 +90,6 @@ HOST_STR="`ip address show dev eth0 | grep inet | grep -v inet6 | awk -F " " '{p
 source ~/.git-completion.sh
 PS1='\n[\u@$HOST_STR:(\d)(\t)]\n[\w$(__git_ps1 " (%s)")]\n\$ '
 
-PATH=$PATH:/usr/local/arm/4.1.1-920t/bin/:/usr/local/arm/4.1.1-920t/:/var/lib/gems/1.8/bin
+PATH=$PATH:/usr/local/arm/4.1.1-920t/bin/:/usr/local/arm/4.1.1-920t/:/var/lib/gems/1.8/bin:~/bin
 export PATH
 
