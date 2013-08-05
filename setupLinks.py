@@ -3,12 +3,12 @@
 import os
 
 SOURCE_LINK_LIST = [
-	('~/conffiles/vim', '~/.vim'),
-	('~/conffiles/vim/vimrc', '~/.vimrc'),
-	('~/conffiles/bash/bashrc', '~/.bashrc'),
-	('~/conffiles/bash/bash_aliases', '~/.bash_aliases'),
-	('~/conffiles/bin', '~/bin'),
-	('~/conffiles/bin/git-completion.sh', '~/.git-completion.sh')
+	('~/home_scripts/vim', '~/.vim'),
+	('~/home_scripts/vim/vimrc', '~/.vimrc'),
+	('~/home_scripts/bash/bashrc', '~/.bashrc'),
+	('~/home_scripts/bash/bash_aliases', '~/.bash_aliases'),
+	('~/home_scripts/bin', '~/bin'),
+	('~/home_scripts/bin/git-completion.sh', '~/.git-completion.sh')
 ]
 
 for t, l in SOURCE_LINK_LIST:
