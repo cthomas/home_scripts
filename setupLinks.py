@@ -28,3 +28,7 @@ for t, l in SOURCE_LINK_LIST:
 		os.symlink(target, link)
 	else:
 		print 'Skipping linking [%s] to [%s]' % (target, link)
+
+CWD = os.getcwd()
+os.system('cd ~/home_scripts && git submodule init && git submodule update')
+os.chdir(CWD)
