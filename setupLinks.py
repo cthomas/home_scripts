@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
 import os
+import sys
 
 SOURCE_LINK_LIST = [
 	('~/home_scripts/vim', '~/.vim'),
 	('~/home_scripts/vim/vimrc', '~/.vimrc'),
-	('~/home_scripts/bash/bashrc', '~/.bashrc'),
+	('~/home_scripts/bash/bashrc', '~/.bashrc' if sys.platform <> 'darwin' else '~/.bash_profile'),
 	('~/home_scripts/bash/bash_aliases', '~/.bash_aliases'),
 	('~/home_scripts/bin', '~/bin'),
 	('~/home_scripts/bin/git-completion.sh', '~/.git-completion.sh')
