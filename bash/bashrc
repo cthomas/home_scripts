@@ -86,7 +86,15 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-HOST_STR="`ip address show dev eth0 | grep inet | grep -v inet6 | awk -F " " '{print $2}'`"
+if [ -n "`which ip`" ]
+then
+	HOST_STR="`ip address show dev eth0 | grep inet | grep -v inet6 | awk -F " " '{print $2}'`"
+elif [ -n "`which hostname`" ]
+then
+	HOST_STR="`hostname`"
+else
+	HOST_STR=""
+fi
 source ~/.git-completion.sh
 PS1='\n[\u@$HOST_STR:(\d)(\t)]\n[\w$(__git_ps1 " (%s)")]\n\$ '
 
