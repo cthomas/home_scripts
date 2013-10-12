@@ -98,6 +98,6 @@ fi
 source ~/.git-completion.sh
 PS1='\n[\u@$HOST_STR:(\d)(\t)]\n[\w$(__git_ps1 " (%s)")]\n\$ '
 
-PATH=$PATH:/usr/local/arm/4.1.1-920t/bin/:/usr/local/arm/4.1.1-920t/:/var/lib/gems/1.8/bin:~/bin
+PATH=$PATH:/usr/local/arm/4.1.1-920t/bin/:/usr/local/arm/4.1.1-920t/:/var/lib/gems/1.8/bin:~/bin:~/bin/tmuxifier/bin
 export PATH
 
