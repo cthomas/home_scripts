@@ -25,10 +25,22 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Remove trailing spaces binding
 map <F12> :call TrimWhiteSpace()<CR>
-func! TrimWhiteSpace()
+function! TrimWhiteSpace()
   %s/\s*$//
   ''
-:endfunction
+endfunction
+
+function! UseSpaces()
+  set expandtab
+  set tabstop=4
+  set shiftwidth=4
+  set smartindent
+endfunction
+
+function! UseTabs()
+  set noexpandtab
+  set smartindent
+endfunction
 
 " Spell check binding
 map ^S :w!<CR>:!aspell check %<CR>:e! %<CR>
