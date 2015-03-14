@@ -47,6 +47,8 @@ if [ -z $DBUS_SESSION_BUS_ADDRESS ]
 	set_dbus_adress `whoami` spotify
 fi
 
+echo "[`date`] Spot cmd $1" >> /tmp/spot_log
+
 case "$1" in
         play)
 		spotify_cmd Play
