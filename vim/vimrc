@@ -83,4 +83,4 @@ let g:syntastic_cpp_auto_refresh_includes=1
 let g:syntastic_cpp_compiler='g++'
 let g:syntastic_cpp_compiler_options=' -std=c++11'
 let g:syntastic_python_checkers=['pyflakes']
-let g:syntastic_sh_checker='checkbashisms'
+let g:syntastic_sh_checkers=['checkbashisms']
