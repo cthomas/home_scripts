@@ -109,6 +109,7 @@ PATH=$PATH:/usr/local/arm/4.1.1-920t/bin/:/home/cthomas/toolchain/current_toolch
 export PATH
 
 export TMUXIFIER_TMUX_OPTS="-2"
+export TMUXIFIER_LAYOUT_PATH=~/.tmuxifier-layouts
 eval "$(tmuxifier init -)"
 
 EDITOR=vim
