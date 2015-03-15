@@ -105,9 +105,11 @@ trap 'SECONDS=0' DEBUG
 source ~/.git-completion.sh
 PS1='\n[\u@$HOST_STR:(\d)(\t)]($(seconds2days $SECONDS))\n[\w$(__git_ps1 " (%s)")]\n\$ '
 
-#PATH=$PATH:/usr/local/arm/4.1.1-920t/bin/:/usr/local/arm/4.1.1-920t/:/var/lib/gems/1.8/bin:~/bin:~/bin/tmuxifier/bin
 PATH=$PATH:/usr/local/arm/4.1.1-920t/bin/:/home/cthomas/toolchain/current_toolchain/bin:/var/lib/gems/1.8/bin:~/bin:~/bin/tmuxifier/bin
 export PATH
+
+export TMUXIFIER_TMUX_OPTS="-2"
+eval "$(tmuxifier init -)"
 
 EDITOR=vim
 export EDITOR
