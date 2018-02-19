@@ -9,9 +9,9 @@ SOURCE_LINK_LIST = [
 	('~/home_scripts/bash/bashrc', '~/.bashrc' if sys.platform <> 'darwin' else '~/.bash_profile'),
 	('~/home_scripts/bash/bash_aliases', '~/.bash_aliases'),
 	('~/home_scripts/bin', '~/bin'),
-	('~/home_scripts/bin/git-completion.sh', '~/.git-completion.sh')
-	('~/home_scripts/tmux/tmux.conf', '~/.tmux.conf')
-	('~/home_scripts/tmux/tmuxifier-layouts', '~/.tmuxifier-layouts')
+	('~/home_scripts/bin/git-completion.sh', '~/.git-completion.sh'),
+	('~/home_scripts/tmux/tmux.conf', '~/.tmux.conf'),
+	('~/home_scripts/tmux/tmuxifier-layouts', '~/.tmuxifier-layouts'),
 ]
 
 for t, l in SOURCE_LINK_LIST:
